@@ -9,7 +9,9 @@
 import Foundation
 
 public class Calculator {
+    let operators = ["+", "-", "*", "/", "%"]
     public func calculate(_ args: [String]) -> Int {
+        return 0
     }
     
     public func calculate(_ arg: String) -> Int {
