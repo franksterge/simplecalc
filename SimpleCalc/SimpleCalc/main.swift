@@ -5,6 +5,14 @@
 //  Created by Ted Neward on 10/3/17.
 //  Copyright © 2017 Neward & Associates. All rights reserved.
 //
+//Fangwen Ge
+//Info 449
+//10.2.18
+//this program is a simple calculator that is capable to do various operations
+//for both possitive and negative integers including addtion, subtraction, multiplication,
+//division, modulus operation as well as complex operation including counting the number of
+//integers in a given list, taking the average for the given list, and taking factorial for a given
+//integer.
 
 import Foundation
 
