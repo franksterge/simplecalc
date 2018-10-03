@@ -13,7 +13,7 @@ public class Calculator {
     public func calculate(_ args: [String]) -> Int {
         var result = 0;
         for element in args {
-            if operators.contains(element) { //check if there is operator in the arguments
+            if operators.contains(element) { //check if there is operator in the argument
                 let ope = element
                 if grammarChecker(args, ope) {
                     let opeIndex = args.firstIndex(of: ope);
@@ -54,20 +54,21 @@ public class Calculator {
         return calculate( arg.split(separator: " ").map({ substr in String(substr) }) )
     }
     
-    //check if the index of the operator is legal. Legal index: for basic operators: between two numbers; for stats operators: at the end.
-    //nested after ddetermining that there is a operator
+    //check if the index of the operator is legal.
+    //Legal index:
+    //    basic operators: between two numbers;
+    //    complex operators: at the end.
     private func grammarChecker(_ args: [String], _ ope: String) -> Bool {
         let opeIndex = operators.firstIndex(of: ope)!;
         switch opeIndex {
         case 0...4:
             return args.firstIndex(of: ope) != 0 && args.firstIndex(of: ope) != args.count - 1
-        case 5...7:
-            return args.firstIndex(of: ope) == args.count - 1
         default:
-            return args.count <= 2
+            return args.firstIndex(of: ope) == args.count - 1
         }
     }
     
+    //find the factorial for the given integer and return the result.
     private func fact(_ num: Int) -> Int {
         switch num {
         case 0:
